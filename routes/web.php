@@ -21,3 +21,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'EstudiantesController@admin')->name('administrativa');
 Route::get('/nopriv', 'EstudiantesController@noadmin')->name('areausuario');
+
+
+
+//crud EstudiantesController
+Route::get('/home', 'EstudiantesController@registros')->name('home');

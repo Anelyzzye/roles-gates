@@ -15,7 +15,7 @@ class EstudiantesController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-      
+
         return view('welcome');
     }
 
@@ -26,4 +26,15 @@ class EstudiantesController extends Controller
     public function noadmin(){
         return view('usuario.usuario');
     }
+
+    public function registros(Request $request){
+      $alumno = $request['alumno'];
+        $info = Estudiante::select(['id','name','email'])
+        ->where('name','LIKE','%'.$alumno.'%')
+        ->get();
+
+
+        return view('home',['alumno' => $alumno],compact('info'));
+    }
+
 }
