@@ -69,10 +69,10 @@
                           @endcan
                         </tr>
                         @endforeach
-            
+
                       </tbody>
                     </table>
-
+{{$info->render()}}
 @include('modaleliminaalumno')
                 </div>
             </div>

@@ -26,3 +26,7 @@ Route::get('/nopriv', 'EstudiantesController@noadmin')->name('areausuario');
 
 //crud EstudiantesController
 Route::get('/home', 'EstudiantesController@registros')->name('home');
+
+//autocompletado
+Route::get('/completa','EstudiantesController@autocompletar')->name('autocompletar.index');
+Route::post('/completa/busqueda','EstudiantesController@mostrardata')->name('autocompletar.alumn');
